@@ -1,0 +1,54 @@
+﻿
+@model FilmDetailViewModel
+
+@{
+    ViewData["Title"] = "Film Details";
+}
+
+
+
+<section class="container">
+
+    <article class="row">
+
+        <div class="col-12">
+
+
+            @if (Model.Title != null)
+            {
+
+                <div class="alert alert-info">
+                    @Model.PageHeader
+                </div>
+
+                <div class="card my-3">
+                    <div class="card-body">
+                        <h2 class="card-title">@Model.Title</h2>
+                        <h6 class="card-subtitle mb-2 text-muted">Date Released: @Model.ReleaseDate.ToShortDateString()</h6>
+                        <p class="card-text">@Model.OpeningCrawl</p>
+
+                        <p>Director: @Model.Director</p>
+                        <p>Producer: @Model.Producer</p>
+
+                        <h6>Film Stats:</h6>
+                        <ul>
+                            <li>Character Count: @Model.CharactersCount </li>
+                            <li>Planet Count: @Model.PlanetsCount </li>
+                            <li>Starships Count: @Model.StarshipsCount </li>
+                        </ul>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger">Film Details Not Found</div>
+            }
+
+            <div>
+                <a asp-action="index" asp-controller="Home" class="btn btn-primary">Back to Film List</a>
+            </div>
+
+        </div>
+    </article>
+
+</section>
