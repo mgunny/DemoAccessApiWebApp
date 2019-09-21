@@ -1,4 +1,4 @@
-# Demo Access API Web App
+# Demo Web App accessing API data
 > This is an Asp.Net Core 2.2 MVC web project to demonstrate accessing and retrieving data from an external API.
 
 The website connects to the public Star Wars API and retrieves data of the main Star Wars films. 
