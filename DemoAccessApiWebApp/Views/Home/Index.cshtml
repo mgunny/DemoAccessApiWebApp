@@ -12,20 +12,21 @@
         
         <div class="col-12">
 
+            <h4 class="text-info my-3">Server Side API access</h4>
+
             <div class="alert alert-info">
                 @Model.PageHeader
             </div>
-           
+
             @foreach (var film in Model.Films)
             {
-               
+
                 <div class="card my-3">
                     <div class="card-body">
                         <h2 class="card-title">@film.Title</h2>
                         <h6 class="card-subtitle mb-2 text-muted">Year Released: @film.ReleaseDate.Year</h6>
-                        <p class="card-text">@film.OpeningCrawl</p>   
-                        
-                        <p>@film.Url</p>
+                        <p class="card-text">@film.OpeningCrawl</p>
+
                         <a asp-controller="Home" asp-action="Detail" asp-route-id="@film.Url.Split("/")[5]">View Details ...</a>
                     </div>
                 </div>

@@ -9,8 +9,7 @@ namespace DemoAccessApiWebApp.Models
 
     public class FilmData
     {
-        public long Count { get; set; }
-     
+        public long Count { get; set; }     
         public List<Film> Results { get; set; }
     }
 

@@ -13,9 +13,12 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
+
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />   
+
 </head>
 <body>
     <header>
@@ -29,14 +32,17 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>                       
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Server Side API Access</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="ClientSide" asp-action="Index">Client Side API Access</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
+
     <div class="container">
 
         <main role="main" class="pb-3">
@@ -72,7 +78,12 @@
                 integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
         </script>
     </environment>
+
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- External Frameworks & Libraries: Vue.js and Axios for making Promise based Http Requests from client side -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     @RenderSection("Scripts", required: false)
 </body>
