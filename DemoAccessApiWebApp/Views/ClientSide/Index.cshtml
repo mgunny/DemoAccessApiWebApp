@@ -21,7 +21,7 @@
                     <span><i class="fa fa-spinner fa-spin"></i>&nbsp;&nbsp;Loading API Data...</span>
                 </div>
 
-                <div v-if="!loading && films.length === 0" class="my-5">
+                <div v-if="!loading && !filmsFound" class="my-5">
                     No films found
                 </div>
 
