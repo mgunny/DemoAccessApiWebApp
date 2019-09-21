@@ -8,7 +8,7 @@ There are two examples of how to access an API, one from server side on page loa
 
 ## Installation
 
-Download the repository and run the project from Visual Studio.
+Download the repository and open the solution file in Visual Studio 2019. Then just click the run button!
 
 ## Project setup details
 
