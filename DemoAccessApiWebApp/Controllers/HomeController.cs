@@ -21,7 +21,7 @@ namespace DemoAccessApiWebApp.Controllers
             _dataRepository = dataRepository;
         }
 
-        [ResponseCache(VaryByHeader = "User-Agent", Duration = 30)]
+        [ResponseCache(Duration = 30, VaryByQueryKeys = new string[] { "*" })]
         public async Task<IActionResult> Index()
         {
 
@@ -49,14 +49,14 @@ namespace DemoAccessApiWebApp.Controllers
             catch (Exception ex)
             {
                 model.PageHeader = $"An error has occurred: {ex.Message}";
-                
+
                 // Log the error here - not implemented in this test.
             }
 
             return View(model);
         }
-
-        [ResponseCache(VaryByHeader = "User-Agent", Duration = 30)]
+     
+        [ResponseCache(Duration = 30, VaryByQueryKeys = new string[] { "*" })]
         public async Task<IActionResult> Detail(int id)
         {
             // Create a default View Model

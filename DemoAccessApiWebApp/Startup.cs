@@ -38,6 +38,7 @@ namespace DemoAccessApiWebApp
             services.AddScoped<IJsonService, JsonService>();
             services.AddScoped<IDataRepository, DataRepository>();
 
+            services.AddResponseCaching();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -55,6 +56,7 @@ namespace DemoAccessApiWebApp
             }
 
             app.UseStaticFiles();
+            app.UseResponseCaching();
 
             app.UseMvc(routes =>
             {

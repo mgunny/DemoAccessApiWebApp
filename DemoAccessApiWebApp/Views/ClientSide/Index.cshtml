@@ -69,6 +69,7 @@
                 // Get the Film data by calling API method on api controller
                 getFilms() {
                     this.loading = true;
+                    this.filmsFound = false;
                     axios.get("/api/WebApi/films")
                         .then(response => { this.films = response.data; this.filmsFound = this.films.length > 0 ? true : false; })
                         .catch(error => { this.errorMessage = error.response.data; })
