@@ -13,8 +13,9 @@ using Microsoft.Extensions.Options;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace DemoAccessApiWebApp.Controllers
-{
+{   
     [Route("api/[controller]")]
+    [ResponseCache(VaryByHeader = "User-Agent", Duration = 30)]
     public class WebApiController : Controller
     {
 

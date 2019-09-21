@@ -21,6 +21,7 @@ namespace DemoAccessApiWebApp.Controllers
             _dataRepository = dataRepository;
         }
 
+        [ResponseCache(VaryByHeader = "User-Agent", Duration = 30)]
         public async Task<IActionResult> Index()
         {
 
@@ -55,6 +56,7 @@ namespace DemoAccessApiWebApp.Controllers
             return View(model);
         }
 
+        [ResponseCache(VaryByHeader = "User-Agent", Duration = 30)]
         public async Task<IActionResult> Detail(int id)
         {
             // Create a default View Model
